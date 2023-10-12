@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
-
 export const EditTodoForm = ({editTodo, task}) => {
+    
+//Este compomente se encarga del actualizar la tarea.
     const [value, setValue] = useState(task.task);
 
     const handleSubmit = (e) => {
@@ -12,7 +13,7 @@ export const EditTodoForm = ({editTodo, task}) => {
   return (
     <form onSubmit={handleSubmit} className="TodoForm">
     <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className="todo-input" placeholder='Update task' />
-    <button type="submit" className='todo-btn'>Add Task</button>
+    <button type="submit" className='todo-btn'>Actualizar tarea</button>
   </form>
   )
 }
